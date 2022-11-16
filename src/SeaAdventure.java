@@ -3,22 +3,11 @@ public class SeaAdventure {
     private int length;
     private int width;
     private int height;
-    private int count;
 
     public SeaAdventure (int length, int width, int height) {
         this.length = length;
         this.width = width;
         this.height = height;
-    }
-    public SeaAdventure (int length, int width) {
-        this.length = length;
-        this.width = width;
-        height = 250;
-    }
-    public SeaAdventure (int length) {
-        this.length = length;
-        width = 40;
-        height = 250;
     }
     public SeaAdventure () {
         length = 250;
@@ -26,43 +15,83 @@ public class SeaAdventure {
         height = 150;
     }
 
-    public boolean willSurviveTsunami () {
-        if (length >= 300 && width >= 30 && height >= 200) {
-            return true;
-        }
-        return false;
-    }
-
     public String toString() {
         return "Ship Length: " + length + "\nShip Width: " + width + "\nShip Height: " + height;
     }
 
     public static boolean shipOnePw (String password) {
-        for (int i = 0; i <= password.length() / 2; i ++) {
-            char a = password.charAt(0);
-            char b = password.charAt(password.length() - 1);
-            if (a != b) {
-                return false;
-            }
+        StringBuilder reversed = new StringBuilder(password);
+        reversed.reverse();
+        String rev = reversed.toString();
+        if (password.equals(rev) && password.length() >= 6) {
+            return true;
         }
-        return true;
+        return false;
     }
 
     public static boolean shipTwoPw (String password) {
-        String correct = "river";
-        if (password == correct) {
+        if (password.equals("river")) {
             return true;
         }
         return false;
     }
 
     public static boolean shipThreePw (String password) {
-        String correct = "human";
-        if (password == correct) {
+        if (password.equals("human")) {
             return true;
         }
         return false;
     }
 
+    public String adventureOne (int path) {
+        if (path == 1) {
+            return "The journey back home had began and you feel really excited! But this did not last long, you have sailed for 10 days and haven't seen anything. You thank God that you had found lots of food on the ship.";
+        }
+        else if (path == 2) {
+            return "You have motion sickness.";
+        }
+        else if (path == 3){
+            return "You caught a cold and will die if you don't feel better in the next 5 days.";
+        }
+        else {
+            return "Sorry, this path does not exist.";
+        }
+    }
+
+    public String adventureTwo (int path) {
+        if (path == 1) {
+            return "Another 10 days have past, your body has healed from the sickness. You started to wonder when you will get back to land.";
+        }
+        else if (path == 2) {
+            return "You died from the worsening of the cold.";
+        }
+        else if (path == 3) {
+            return "You've encountered a pod of dolphins, they swam around your ship and you interacted with them. You finally experienced something interesting.";
+        }
+        else {
+            return "Sorry, this path does not exist.";
+        }
+    }
+
+    public String adventureThree (int path) {
+        if (path == 1) {
+            return "You've encountered a tsunami and died.";
+        }
+        else if (path == 2) {
+            return "You sailed on the sea and encountered a pirate ship. They saw your ship and sailed towards you, but you don't know what to do. You tried to turn the ship and run, but you failed to escape and the pirates managed to board your ship. You died.";
+        }
+        else if (path == 3) {
+            return "Another 10 days have past, during the past days, you did some activities such as fishing and observing different species of sea animals.";
+        }
+        else {
+            return "Sorry, this path does not exist.";
+        }
+    }
+
+    public String adventureFour (int path) {
+        if (path == 1) {
+            return ""
+        }
+    }
 
 }
