@@ -90,7 +90,25 @@ public class SeaAdventure {
 
     public String adventureFour (int path) {
         if (path == 1) {
-            return ""
+            return "You've encountered a tsunami and got DESTROYED.";
+        }
+        else if (path == 2) {
+            return "10 days have past, you went back to being bored, but you have a feeling that you can almost see land.";
+        }
+        else if (path == 3) {
+            return "You felt bored so you jumped off the ship and swam in the sea water. But then, you saw a shark........................................................................You swam as fast as you could back to the ship and barely managed to survive!!!";
+        }
+        else {
+            return "Sorry, this path does not exist.";
+        }
+    }
+
+    public String adventureFive (int path) {
+        if (path == 1) {
+            return "You finally saw land! You sailed the ship in that direction and officially wave goodbye to the hellish life of the past few days.";
+        }
+        else if (path == 2) {
+            return "You had a feeling that the ship was shorter than yesterday, but you didn't think about too much. After a few days, you've realized that there's a hole on the bottom of your ship! You don't know what happened and accepted your fate of death.";
         }
     }
 
