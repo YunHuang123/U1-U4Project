@@ -43,6 +43,27 @@ public class SeaAdventure {
         return false;
     }
 
+    public void increaseLength() {
+        length += 50;
+    }
+
+    public void increaseWidth () {
+        width += 5;
+    }
+
+    public void increaseHeight () {
+        height += 50;
+    }
+
+    public boolean willSurviveTsunami () {
+        if (length >= 300 && width >= 30 && height >= 200) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     public String adventureOne (int path) {
         if (path == 1) {
             return "The journey back home had began and you feel really excited! But this did not last long, you have sailed for 10 days and haven't seen anything. You thank God that you had found lots of food on the ship.";
@@ -105,11 +126,27 @@ public class SeaAdventure {
 
     public String adventureFive (int path) {
         if (path == 1) {
-            return "You finally saw land! You sailed the ship in that direction and officially wave goodbye to the hellish life of the past few days.";
+            return "You finally saw land! You sailed the ship in that direction and officially wave goodbye to the hellish life of the past few days. (Type 99 to wrap up the game)";
         }
         else if (path == 2) {
-            return "You had a feeling that the ship was shorter than yesterday, but you didn't think about too much. After a few days, you've realized that there's a hole on the bottom of your ship! You don't know what happened and accepted your fate of death.";
+            return "You had a feeling that the ship was shorter than yesterday, but you didn't think about too much. After a few days, you've realized that there's a hole on the bottom of your ship! You don't know what happened and accepted your fate of death (Type 99 to wrap up the game).";
+        }
+        else if(path == 3) {
+            return "You've encountered a huricane. Your ship flipped over and you died. (Type 99 to wrap up the game)";
+        }
+        else {
+            return "Sorry, this path does not exist. (Type 99 to wrap up the game)";
+        }
+    }
+
+    public static boolean endGame (int num) {
+        if (num == 99) {
+            return true;
+        }
+        else {
+            return false;
         }
     }
 
 }
+
