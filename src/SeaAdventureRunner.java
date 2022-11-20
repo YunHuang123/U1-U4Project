@@ -13,6 +13,11 @@ public class SeaAdventureRunner {
         SeaAdventure Giant = new SeaAdventure(length, width, height);
         SeaAdventure Small = new SeaAdventure();
 
+        while (shipNum < 1 || shipNum > 4) {
+            System.out.println("You may only choose 1, 2, 3, or 4.");
+            shipNum = i.nextInt();
+        }
+
         if (shipNum == 1) {
             System.out.println("Please think of a palindrome (a word that is spelled the same backwards) that is at least 6 letters (all lowercase): ");
             String answer = s.nextLine();
@@ -49,9 +54,24 @@ public class SeaAdventureRunner {
         if (shipNum == 4) {
             System.out.println("You chose the fourth ship...");
             System.out.println(Small.toString());
+            System.out.println("Now, begin your journey back home! Which path would you like to choose? (1, 2, 3)");
+            int path = i.nextInt();
+            while (!SeaAdventure.endGame(path)) {
+                Small.adventureOne(path);
+                System.out.println("Which path would you choose? (1, 2, 3)");
+                path = i.nextInt();
+                Small.adventureTwo(path);
+                path = i.nextInt();
+                Small.adventureThree(path);
+                path = i.nextInt();
+                Small.adventureFour(path);
+                path = i.nextInt();
+                Small.adventureFive(path);
+                path = i.nextInt();
+            }
         }
 
-        System.out.println("Now, begin your journey back home! Which path would you like to choose? (1, 2, 3)");
+        /*System.out.println("Now, begin your journey back home! Which path would you like to choose? (1, 2, 3)");
         int path = i.nextInt();
         if (!SeaAdventure.endGame(path)) {
             if (shipNum == 4) {
@@ -81,7 +101,7 @@ public class SeaAdventureRunner {
                 path = i.nextInt();
                 SeaAdventure.endGame(path);
             }
-        }
+        }*/
 
 
 
