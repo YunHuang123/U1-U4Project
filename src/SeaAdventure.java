@@ -72,7 +72,7 @@ public class SeaAdventure {
             return "You have motion sickness.";
         }
         else if (path == 3){
-            return "You caught a cold and will die if you don't feel better in the next 5 days.";
+            return "You caught a cold, but thank god it didn't cause much problem.";
         }
         else {
             return "Sorry, this path does not exist.";

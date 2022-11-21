@@ -54,54 +54,60 @@ public class SeaAdventureRunner {
         if (shipNum == 4) {
             System.out.println("You chose the fourth ship...");
             System.out.println(Small.toString());
-            System.out.println("Now, begin your journey back home! Which path would you like to choose? (1, 2, 3)");
+            /*System.out.println("Now, begin your journey back home! Which path would you like to choose? (1, 2, 3)");
             int path = i.nextInt();
-            while (!SeaAdventure.endGame(path)) {
-                Small.adventureOne(path);
-                System.out.println("Which path would you choose? (1, 2, 3)");
-                path = i.nextInt();
-                Small.adventureTwo(path);
-                path = i.nextInt();
-                Small.adventureThree(path);
-                path = i.nextInt();
-                Small.adventureFour(path);
-                path = i.nextInt();
-                Small.adventureFive(path);
-                path = i.nextInt();
-            }
+            Small.adventureOne(path);
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            Small.adventureTwo(path);
+            path = i.nextInt();
+            Small.adventureThree(path);
+            path = i.nextInt();
+            Small.adventureFour(path);
+            path = i.nextInt();
+            Small.adventureFive(path);
+            path = i.nextInt();
+            SeaAdventure.endGame(path);*/
         }
 
-        /*System.out.println("Now, begin your journey back home! Which path would you like to choose? (1, 2, 3)");
+        System.out.println("Now, begin your journey back home! Which path would you like to choose? (1, 2, 3)");
         int path = i.nextInt();
-        if (!SeaAdventure.endGame(path)) {
-            if (shipNum == 4) {
-                Small.adventureOne(path);
-                System.out.println("Which path would you choose? (1, 2, 3)");
-                path = i.nextInt();
-                Small.adventureTwo(path);
-                path = i.nextInt();
-                Small.adventureThree(path);
-                path = i.nextInt();
-                Small.adventureFour(path);
-                path = i.nextInt();
-                Small.adventureFive(path);
-                path = i.nextInt();
-                SeaAdventure.endGame(path);
-            }
-            else {
-                Giant.adventureOne(path);
-                path = i.nextInt();
-                Giant.adventureTwo(path);
-                path = i.nextInt();
-                Giant.adventureThree(path);
-                path = i.nextInt();
-                Giant.adventureFour(path);
-                path = i.nextInt();
-                Giant.adventureFive(path);
-                path = i.nextInt();
-                SeaAdventure.endGame(path);
-            }
-        }*/
+        if (shipNum == 4) {
+            System.out.println(Small.adventureOne(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Small.adventureTwo(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Small.adventureThree(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Small.adventureFour(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Small.adventureFive(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            SeaAdventure.endGame(path);
+        }
+        else {
+            System.out.println(Small.adventureOne(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Giant.adventureTwo(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Giant.adventureThree(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Giant.adventureFour(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            System.out.println(Giant.adventureFive(path));
+            System.out.println("Which path would you choose? (1, 2, 3)");
+            path = i.nextInt();
+            SeaAdventure.endGame(path);
+        }
 
 
 

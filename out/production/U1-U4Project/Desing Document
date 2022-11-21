@@ -1,0 +1,39 @@
+private int length;
+private int width;
+private int height;
+
+XXX - object name (ship 1)
+constructor - 3 parameters that initiate the length, width, and height of a ship
+constructor - 0 parameters that assign the length, width, and height of the ship. This is a backup, just in case the user can’t think of the right password for any of the ships.
+
+Public static boolean shipOnePw (String password) - the program takes the user input and checks to see if it’s a palindrome, if it is, returns true, else it returns false.
+
+public static boolean shipTwoPw (String password) - gives a riddle and returns true if the user inputs the correct answer and returns false otherwise.
+
+public static boolean shipThreePw (String password - gives an easier riddle and returns true if the user inputs the correct answer and false otherwise.
+
+public void increaseLength () - increases the length by 50
+public void increaseWidth () - increases the width by 5
+public void increaseHeight () - increases the height by 50
+
+public boolean willSurvivTsunami () - returns true if length is at least 300, width is at least 30, and height is at least 200, else returns false
+
+public String adventureOne (int path) - returns what happens to the user that corresponds to his input.
+public String adventureTwo (int path) - returns what happens to the user that corresponds to his input.
+public String adventureThree (int path) - returns what happens to the user that corresponds to his input.
+public String adventureFour (int path) - returns what happens to the user that corresponds to his input.
+public String adventureFive (int path) - returns what happens to the user that corresponds to his input.
+Different things can happen on the ocean, things like tsunami, pirate attack, hits a large rock, motion sickness, small waves, loneliness, etc
+
+public String toString () - returns the length, width, and height of the ship unlocked.
+
+public boolean endGame () - returns true if the user inputs 99, false otherwise
+
+
+Client class:
+Uses a scanner to receive user input.
+Create four objects, then use if statements to print out the toString method if the password is right. Make sure the toString method is inside the if condition.
+After a ship is unlocked, the user starts their journey.
+Use user inputs to receive their choices on which path to go on.
+If they choose the right path, they survive that round and continue until they either die or reach land.
+Lastly, congrat the user.
