@@ -1,32 +1,58 @@
+/**
+ * SeaAdventure represents the game, everything required for the game is in this class
+ */
 public class SeaAdventure {
 
     private int length;
     private int width;
     private int height;
 
+    /**
+     * A constructor of the SeaAdventure class. This SeaAdventure creates an object with three parameters that are randomly assigned in the runner class
+     * @param length represents the length of the ship
+     * @param width represents the width of the ship
+     * @param height represents the height of the ship
+     */
     public SeaAdventure (int length, int width, int height) {
         this.length = length;
         this.width = width;
         this.height = height;
     }
+
+    /**
+     * A constructor of the SeaAdventure class. This SeaAdventure creates an object with zero parameters, the length, width, and height are assigned below
+     */
     public SeaAdventure () {
         length = 250;
         width = 25;
         height = 150;
     }
 
+    /**
+     * A method of the SeaAdventure class. This method increases the length of the object (ship) by 100
+     */
     public void increaseLength() {
         length += 100;
     }
 
+    /**
+     * A method of the SeaAdventure class. This method increases the width of the object (ship) by 10
+     */
     public void increaseWidth () {
         width += 10;
     }
 
+    /**
+     * A method of the SeaAdventure class. This method increases the height of the object (ship) by 50
+     */
     public void increaseHeight () {
         height += 50;
     }
 
+    /**
+     * A method of the SeaAdventure class. This method checks to see if the size of the object (ship's length, width, and height) is large enough to survive a tsunami
+     * @return true if the ship is large enough to survive a tsunami, return false if it is not large enough
+     */
     public boolean willSurviveTsunami () {
         if (length >= 300 && width >= 30 && height >= 200) {
             return true;
@@ -36,10 +62,19 @@ public class SeaAdventure {
         }
     }
 
+    /**
+     * A method of the SeaAdventure class. This is a method that returns the stats of the object (ship)
+     * @return the length, width, and height of the object (ship)
+     */
     public String toString() {
         return "Ship Length: " + length + "\nShip Width: " + width + "\nShip Height: " + height;
     }
 
+    /**
+     * A method of the SeaAdventure class. This method is used to see if the user answers the given question correctly for the first ship
+     * @param password a String that represents the user's input for the given question
+     * @return true if the user input reaches the requirements, return false otherwise
+     */
     public static boolean shipOnePw (String password) {
         StringBuilder reversed = new StringBuilder(password);
         reversed.reverse();
@@ -47,9 +82,16 @@ public class SeaAdventure {
         if (password.equals(rev) && password.length() >= 6) {
             return true;
         }
-        return false;
+        else {
+            return false;
+        }
     }
 
+    /**
+     * A method of the SeaAdventure class. This method is used to see if the user answers the given question correctly for the second ship
+     * @param password a String that represents the user's input for the given question
+     * @return return true if the user input matches the given answer, return false otherwise
+     */
     public static boolean shipTwoPw (String password) {
         if (password.equals("river")) {
             return true;
@@ -57,6 +99,11 @@ public class SeaAdventure {
         return false;
     }
 
+    /**
+     * A method of the SeaAdventure class. This method is used to see if the user answers the given question correctly for the third ship
+     * @param password a String that represents the user's input for the given question
+     * @return return true if the user input matches the given answer, return false otherwise
+     */
     public static boolean shipThreePw (String password) {
         if (password.equals("human")) {
             return true;
@@ -64,6 +111,11 @@ public class SeaAdventure {
         return false;
     }
 
+    /**
+     * A method of the SeaAdventure class. This method includes the scenes of what happens after the user enters a user input for their choice of route
+     * @param path an integer that represents the user's input
+     * @return the scenes of what happens after the user enters a number
+     */
     public String adventureOne (int path) {
         if (path == 1) {
             return "The journey back home had began and you feel really excited! But this did not last long, you have sailed for 10 days and haven't seen anything. \nYou thank God that you had found lots of food on the ship.";
@@ -79,6 +131,11 @@ public class SeaAdventure {
         }
     }
 
+    /**
+     * A method of the SeaAdventure class. This method includes the scenes of what happens after the user enters a user input for their choice of route
+     * @param path an integer that represents the user's input
+     * @return the scenes of what happens after the user enters a number
+     */
     public String adventureTwo (int path) {
         if (path == 1) {
             return "Another 10 days have past, you started to wonder when you will get back to land.";
@@ -94,6 +151,11 @@ public class SeaAdventure {
         }
     }
 
+    /**
+     * A method of the SeaAdventure class. This method includes the scenes of what happens after the user enters a user input for their choice of route
+     * @param path an integer that represents the user's input
+     * @return the scenes of what happens after the user enters a number
+     */
     public String adventureThree (int path) {
         if (path == 1) {
             return "You've encountered a tsunami and died.";
@@ -109,6 +171,11 @@ public class SeaAdventure {
         }
     }
 
+    /**
+     * A method of the SeaAdventure class. This method includes the scenes of what happens after the user enters a user input for their choice of route
+     * @param path an integer that represents the user's input
+     * @return the scenes of what happens after the user enters a number
+     */
     public String adventureFour (int path) {
         if (path == 1) {
             return "You've encountered a tsunami and got DESTROYED.";
@@ -124,6 +191,11 @@ public class SeaAdventure {
         }
     }
 
+    /**
+     * A method of the SeaAdventure class. This method includes the scenes of what happens after the user enters a user input for their choice of route
+     * @param path an integer that represents the user's input
+     * @return the scenes of what happens after the user enters a number
+     */
     public String adventureFive (int path) {
         if (path == 1) {
             return "You finally saw land! You sailed the ship in that direction and officially wave goodbye to the hellish life of the past few days. \nGreat job! You survived!";
