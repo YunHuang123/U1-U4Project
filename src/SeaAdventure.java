@@ -201,13 +201,13 @@ public class SeaAdventure {
             return "You finally saw land! You sailed the ship in that direction and officially wave goodbye to the hellish life of the past few days. \nGreat job! You survived!";
         }
         else if (path == 2) {
-            return "You had a feeling that you were closer to the surface of the ocean than yesterday, but you didn't think about too much. \nAfter a few days, you've realized that there's a hole on the bottom of your ship! You don't know what happened and accepted your fate of death.";
+            return "You had a feeling that you were closer to the surface of the ocean than yesterday, but you didn't think about too much. \nAfter a few days, you've realized that there's a hole on the bottom of your ship! You don't know what to do and accepted your fate of death.";
         }
         else if(path == 3) {
             return "You've encountered a hurricane. Your ship flipped over and you died.";
         }
         else {
-            return "Sorry, this path does not exist. (Type 99 to wrap up the game)";
+            return "Sorry, this path does not exist.";
         }
     }
 

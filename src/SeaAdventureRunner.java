@@ -82,7 +82,8 @@ public class SeaAdventureRunner {
                 if (path == 1) {
                     if (Small.willSurviveTsunami()) {
                         System.out.println("Yay! Your ship is large enough in size to withstand the tsunami!");
-                    } else {
+                    }
+                    else {
                         System.out.println(Small.adventureThree(path));
                         break;
                     }
@@ -103,7 +104,8 @@ public class SeaAdventureRunner {
                 if (path == 1) {
                     if (Small.willSurviveTsunami()) {
                         System.out.println("Yay! Your ship is large enough in size to withstand the tsunami!");
-                    } else {
+                    }
+                    else {
                         System.out.println(Small.adventureFour(path));
                         break;
                     }
@@ -113,14 +115,8 @@ public class SeaAdventureRunner {
                 }
                 System.out.println("Which path would you choose? (1, 2, 3)");
                 path = i.nextInt();
-                if (path == 1) {
-                    System.out.println(Small.adventureFive(path));
-                    break;
-                }
-                else {
-                    System.out.println(Small.adventureFive(path));
-                    break;
-                }
+                System.out.println(Small.adventureFive(path));
+                break;
             }
             else {
                 if (path == 2) {
@@ -147,7 +143,8 @@ public class SeaAdventureRunner {
                 if (path == 1) {
                     if (Giant.willSurviveTsunami()) {
                         System.out.println("Yay! Your ship is large enough in size to withstand the tsunami!");
-                    } else {
+                    }
+                    else {
                         System.out.println(Giant.adventureThree(path));
                         break;
                     }
@@ -168,7 +165,8 @@ public class SeaAdventureRunner {
                 if (path == 1) {
                     if (Giant.willSurviveTsunami()) {
                         System.out.println("Yay! Your ship is large enough in size to withstand the tsunami!");
-                    } else {
+                    }
+                    else {
                         System.out.println(Giant.adventureFour(path));
                         break;
                     }
@@ -178,18 +176,12 @@ public class SeaAdventureRunner {
                 }
                 System.out.println("Which path would you choose? (1, 2, 3)");
                 path = i.nextInt();
-                if (path == 1) {
-                    System.out.println(Giant.adventureFive(path));
-                    break;
-                }
-                else {
-                    System.out.println(Giant.adventureFive(path));
-                    break;
+                System.out.println(Giant.adventureFive(path));
+                break;
                 }
             }
 
 
 
-        }
     }
 }
